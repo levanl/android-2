@@ -22,6 +22,7 @@
         app:layout_constraintTop_toBottomOf="@+id/backButton"
         app:layout_constraintStart_toStartOf="@+id/backButton"
         android:textSize="30sp"
+        android:layout_marginTop="80dp"
         android:textColor="@color/white"
         android:textStyle="bold" />
     <androidx.appcompat.widget.AppCompatButton
@@ -36,31 +37,106 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="40dp"
         android:layout_marginBottom="20dp" />
+
     <LinearLayout
-        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
-        android:layout_marginBottom="40dp"
-        android:gravity="center"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_weight="10"
-        android:background="@color/white"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Or"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:textSize="20sp"
-        android:layout_weight="1"
-        android:textColor="@color/white"/>
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        tools:layout_editor_absoluteX="40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="10"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Or"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="10"
+            android:background="@color/white" />
+    </LinearLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_weight="10"
-        android:background="@color/white"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+
+            android:id="@+id/email_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/white"
+            android:drawableStart="@drawable/baseline_mail_outline_24"
+            />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:drawableStart="@drawable/baseline_lock_24"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:text="Forgot Password?"
+            android:textColor="@color/white"
+            android:layout_marginTop="7dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Log In"
+            android:id="@+id/logInButton"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="200dp"
+            android:layout_marginTop="20dp"
+
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
